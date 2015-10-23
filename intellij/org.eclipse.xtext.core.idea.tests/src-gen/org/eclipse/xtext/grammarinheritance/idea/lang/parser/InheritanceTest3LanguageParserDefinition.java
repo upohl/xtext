@@ -57,6 +57,7 @@ public class InheritanceTest3LanguageParserDefinition extends AbstractXtextParse
 					elementTypeProvider.getInheritanceTestLanguageElement_NameIDTerminalRuleCall_1_0ElementType()
 				);
 			}
+			throw new IllegalStateException("Unexpected element type: " + elementType);
 		}
 		return super.createElement(node);
 	}

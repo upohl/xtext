@@ -2536,6 +2536,9 @@ public class IdeaPluginGenerator extends Xtend2GeneratorFragment {
           _builder.newLine();
         }
       }
+      _builder.append("\t\t\t");
+      _builder.append("throw new IllegalStateException(\"Unexpected element type: \" + elementType);");
+      _builder.newLine();
       _builder.append("\t\t");
       _builder.append("}");
       _builder.newLine();

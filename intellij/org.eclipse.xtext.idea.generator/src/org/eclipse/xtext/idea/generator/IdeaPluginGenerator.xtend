@@ -835,6 +835,7 @@ class IdeaPluginGenerator extends Xtend2GeneratorFragment {
 							);
 						}
 						«ENDFOR»
+						throw new IllegalStateException("Unexpected element type: " + elementType);
 					}
 					return super.createElement(node);
 				}
@@ -895,6 +896,7 @@ class IdeaPluginGenerator extends Xtend2GeneratorFragment {
 			}
 		}
 	'''
+
 	def compileCompletionContributor(Grammar grammar) '''
 		package «grammar.completionContributor.toPackageName»
 		
